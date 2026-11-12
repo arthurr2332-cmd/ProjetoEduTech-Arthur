@@ -176,3 +176,7 @@ button{
     border-radius: 8px;
     cursor: pointer;
 }
+
+#containerFormContato{
+    text-align: center;
+}
