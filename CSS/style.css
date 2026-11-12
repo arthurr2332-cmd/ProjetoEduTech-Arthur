@@ -170,8 +170,9 @@ input:focus, textarea:focus{
 
 button{
     background-color: #ff6a00;
-    color: white; padding: 10px 20px;
+    color: white; 
+    padding: 10px 20px;
     border: none;
     border-radius: 8px;
-     cursor: pointer;
+    cursor: pointer;
 }
