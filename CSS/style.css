@@ -140,7 +140,7 @@ footer a{
      text-align: center;
 }
 
-.curso{
+.cursos {
     padding: 15px;
     margin: 15px 0;
     border: 1px solid #ddd;
@@ -148,7 +148,7 @@ footer a{
     text-align: center;
 }
 
-.curso img{
+.cursos img{
     max-width: 100%;
     height: auto;
 }
