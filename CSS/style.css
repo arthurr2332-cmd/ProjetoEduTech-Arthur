@@ -24,7 +24,12 @@ p{
 /*CABECALHO E MENU*/
 
 header{
-     background-color: #1a4db3; color: white; padding: 20px 0;
+    display: flex; /*Ativa o Flexbox*/
+    justify-content: space-between; /* Logo de um canto e menu de outro*/
+    align-items: center; /* Alinha os items no meio da vertical*/
+    background-color: #1a4db3; 
+    color: white; 
+    padding: 10px 20px;
 }
 
 .logo{
@@ -52,6 +57,16 @@ nav a{
 
 nav a:hover{
     color: #ff6a00;
+}
+
+.ativo{
+    color: darkorange;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex; /*Links ficam em linha*/
+    gap: 15px; /*Espaço entre as linhas*/
 }
 
 /*SECAO PRINCIPAL*/
@@ -141,6 +156,10 @@ footer a{
 }
 
 .cursos {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    transition: 0.2;
     padding: 15px;
     margin: 15px 0;
     border: 1px solid #ddd;
@@ -148,9 +167,18 @@ footer a{
     text-align: center;
 }
 
+.cursos:hover{
+    transform: translateY(-3px); /*Sobe um pouco*/
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12); /*Projeção de sombras*/
+}
+
 .cursos img{
-    max-width: 100%;
-    height: auto;
+    width:100%; /* Ocupa toda a largura do card*/
+    height:140px; /* Altura padrão para todas as imagens*/
+    object-fit: contain; /*Mostra a imagem inteira*/
+    background-color: white; /*Cor de Fundo*/
+    border-radius: 6px; /*Bordas arredondadas*/
+    margin-top: 10px; /*Margem em cima da imagem*/
 }
 
 input, textarea{
