@@ -165,6 +165,7 @@ footer a{
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
+    text-decoration: none;
 }
 
 .cursos:hover{
