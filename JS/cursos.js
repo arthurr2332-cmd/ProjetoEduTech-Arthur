@@ -18,12 +18,12 @@ let cursos = []; // aqui vai ficar a lista carregado do json
 3) FUNÇÃO PARA CARREGAR JSON
 ========================*/
 
- function carregarCursos(){
+ async function carregarCursos(){
     // busca o arquivo cursos.json (como se fosse uma mini API)
-    const resposta = fetch("../DATA/cursos.json");
+    const resposta = await fetch("../DATA/cursos.json");
 
     // transforma o JSON em dados que o JS entende
-    cursos = resposta.json();
+    cursos = await resposta.json();
 
     //depois de carregar, já renderiza na tela
     renderizarCursos(cursos);
@@ -37,9 +37,9 @@ function renderizarCursos(lista){
     listaCursos.innerHTML = ""
 
     //para cada curso da lista , cria um card
-    lista.forEach((curso)=> {
+    lista.forEach((curso) => {
          // cria um elemento HTML <div>
-        const card = document.cvreatElement("div");
+        const card = document.createElement("div");
 
         //coloca uma classe (para o CSS estilizar)
         card.classlist.add("card-curso")
@@ -47,8 +47,8 @@ function renderizarCursos(lista){
         //coloca o conteúdo dentro de CARD DE CURSO
         card.innerHTML = `
         <h3>${curso.titulo}</h3>
-        <p>${curso.descricao}</p>
         <img src="${curso.img}">
+        <p>${curso.descricao}</p>
         <p><strong>CH:</strong>${curso.cargaHoraria}h</p>        
         `
 
@@ -73,6 +73,8 @@ buscaCursos.addEventListener("input", function(){
     const filtrados = cursos.filter((curso)=>
     curso.titulo.toLowerCase().includes(texto)
     );
+
+    renderizarCursos(filtrados);
 })
 
 /* ======================
