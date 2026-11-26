@@ -8,6 +8,7 @@ body{
     padding-bottom: 120px;
     color: black;
     background-color: #ffffff;
+    text-align: center;
     
 }
 
@@ -113,13 +114,14 @@ nav a:hover{
     padding: 30px 20px;
 }
 
-.card{
+.card-curso{
      background-color: white;
      padding: 20px;
      margin: 12px 0;
      border: 1px solid #dddddd;
      border-radius: 8px;
      text-align: center;
+     text-decoration: none;
 }
 
 footer{
